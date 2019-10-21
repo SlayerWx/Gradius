@@ -1,0 +1,28 @@
+﻿  Main.cpp
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(34): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(57): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(59): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(62): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(62): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(64): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(64): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(80): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(102): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(145): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(147): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(150): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(150): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(152): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(152): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(155): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(155): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(157): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(157): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(190): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(191): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(194): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(194): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(196): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(196): warning C4244: 'argumento': conversión de 'const float' a 'int'; posible pérdida de datos
+c:\users\matias\desktop\programacion\gradius-master\flop\flop\main.cpp(229): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+  Flop.vcxproj -> C:\Users\Matias\Desktop\Programacion\Gradius-master\Flop\Debug\Flop.exe
