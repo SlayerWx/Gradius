@@ -22,7 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{437A9DEF-50D7-43CD-958B-CEFB6FDF9705}</ProjectGuid>
     <RootNamespace>Flop</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -79,7 +79,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Administrador\Desktop\Gradius\Flop\raylib-2.5.0-Win32-msvc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)raylib-2.5.0-Win32-msvc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>raylib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -126,7 +126,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Backgrounds.cpp" />
+    <ClCompile Include="Enemy1.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="MagicNumbers.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Scenes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Backgrounds.h" />
+    <ClInclude Include="Enemy1.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="MagicNumbers.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Scenes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
