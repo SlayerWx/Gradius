@@ -1,9 +1,17 @@
 #include "raylib.h"
-struct Player {
-	Rectangle rec;
-	Color color;
+#include "Bullet.h"
+class Player {
+private:
+	Rectangle _rec;
+	Color _color;
+public:
+	Player();
+	void shoot();
+	void input();
+	Rectangle getRec();
+	float getRecX();
+	float getRecY();
+	void setRecX(float x);
+	void setRecY(float y);
+	Color getColor();
 };
-extern Player player;
-
-void initPlayer();
-void playerInput();

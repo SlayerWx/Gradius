@@ -1,11 +1,14 @@
 #include "raylib.h"
 
-struct Enemy1 {
-	Rectangle rec;
-	Color color;
+class Enemy1 {
+private:
+	Rectangle _rec;
+	Color _color;
+public:
+	Enemy1();
+	Rectangle getRec();
+	Color getColor();
+	void destroy();
+	void update();
 };
 
-extern Enemy1 enemy1;
-void initEnemy1();
-void enemy1Update();
-void drawBG1();

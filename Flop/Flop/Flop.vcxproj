@@ -127,6 +127,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Backgrounds.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Enemy1.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="MagicNumbers.cpp" />
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Backgrounds.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Enemy1.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="MagicNumbers.h" />

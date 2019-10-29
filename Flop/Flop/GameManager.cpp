@@ -1,29 +1,37 @@
 #include "GameManager.h"
+Enemy1* e1;
+Player* player;
+Bullet* bullets[10];
+
 void draw() {
 	BeginDrawing();
 	ClearBackground(BLACK);
 	drawBG1();
-	DrawRectangleRec(player.rec, player.color);
-	DrawRectangleRec(enemy1.rec, enemy1.color);
+	DrawRectangleRec(player->getRec(), player->getColor());
+	DrawRectangleRec(e1->getRec(), e1->getColor());
 	EndDrawing();
 }
 void collisions() {
-	if (player.rec.y < 0)
-		player.rec.y = 1;
-	if (player.rec.y > GetScreenHeight() - 40)
-		player.rec.y = GetScreenHeight() - 41;
+	if (player->getRecY() < 0)
+		player->setRecY(1);
+	if (player->getRecY() > GetScreenHeight() - 40)
+		player->setRecY(GetScreenHeight() - 41);
 
-	if (CheckCollisionRecs(player.rec, enemy1.rec))
+	if (CheckCollisionRecs(player->getRec(), e1->getRec()))
 		scenes = menu;
 }
 void game() {
+	e1 = new Enemy1;
+	player = new Player;
+	for (int i = 0; i < 10; i++){
+		bullets[i] = new Bullet;
+	}
 
-	initPlayer();
-	initEnemy1();
 	initBG1();
+
 	while (scenes == gameplay) {
-		playerInput();
-		enemy1Update();
+		player->input();
+		e1->update();
 		collisions();
 		moveBG1();
 		draw();

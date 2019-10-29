@@ -7,7 +7,6 @@ class Star {
 	int _radius;
 public:
 	Star();
-	~Star();
 	void updatePos();
 	Color getColor();
 	Vector2 getPos();
