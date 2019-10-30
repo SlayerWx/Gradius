@@ -11,15 +11,15 @@ private:
 	bool itIsActive;
 	float speed;
 public:
-	Bomb(bool isActive, float newSpeed,int radius;
+	Bomb(bool isActive, float newSpeed,int radius);
 	float getX();
 	float getY();
 	void setX(float x);
 	void setY(float y);
 	int getRadius();
 	Color getColor();
-	void TheBombIsActived(bool active);
-	void move();
+	void isActived(bool active);
 	bool getIsActive();
+	Vector2 moveLerp(Vector2 start, Vector2 end, float percent);
 };
 #endif

@@ -1,5 +1,6 @@
 #include "raylib.h"
 #include "Bullet.h"
+#include "Bomb.h"
 class Player {
 private:
 	Rectangle _rec;
@@ -7,8 +8,8 @@ private:
 public:
 	Player();
 	void shoot();
-	void bombShoot();
-	void input();
+	void bombShoot(Bomb * playerBomb);
+	void input(Bomb * playerBomb);
 	Rectangle getRec();
 	float getRecX();
 	float getRecY();

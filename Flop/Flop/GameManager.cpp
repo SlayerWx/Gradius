@@ -1,5 +1,6 @@
 #include "GameManager.h"
 Enemy1* e1;
+Enemy1* groundEnemy;
 Player* player;
 Bullet* bullets[10];
 Bomb* playerBomb;
@@ -9,6 +10,12 @@ void draw() {
 	drawBG1();
 	DrawRectangleRec(player->getRec(), player->getColor());
 	DrawRectangleRec(e1->getRec(), e1->getColor());
+	DrawRectangleRec(groundEnemy->getRec(),groundEnemy->getColor());
+	if (playerBomb->getIsActive())
+	{
+		DrawCircle(playerBomb->getX(), playerBomb->getY(), playerBomb->getRadius(), 
+			playerBomb->getColor());
+	}
 	EndDrawing();
 }
 void collisions() {
@@ -17,22 +24,27 @@ void collisions() {
 	if (player->getRecY() > GetScreenHeight() - 40)
 		player->setRecY(GetScreenHeight() - 41);
 
-	if (CheckCollisionRecs(player->getRec(), e1->getRec()))
+	if (CheckCollisionRecs(player->getRec(), e1->getRec()) ||
+		CheckCollisionRecs(player->getRec(), groundEnemy->getRec()))
 		scenes = menu;
+	if (CheckCollisionCircleRec({ playerBomb->getX(),playerBomb->getY() },
+		playerBomb->getRadius(), groundEnemy->getRec()))
+		groundEnemy->setX(groundEnemy->getRec().x + GetScreenWidth() + 50);
 }
 void game() {
-	e1 = new Enemy1;
-	player = new Player;
+	e1 = new Enemy1();
+	groundEnemy = new Enemy1(GetScreenHeight());
+	player = new Player();
 	for (int i = 0; i < 10; i++){
 		bullets[i] = new Bullet();
 	}
-	playerBomb = new Bomb(true,150);
-
+	playerBomb = new Bomb(false,150,15);
 	initBG1();
 
 	while (scenes == gameplay) {
-		player->input();
+		player->input(playerBomb);
 		e1->update();
+		groundEnemy->GroundUpdate();
 		collisions();
 		moveBG1();
 		draw();

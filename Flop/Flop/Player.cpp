@@ -9,10 +9,15 @@ Player::Player() {
 void Player::shoot() {
 	
 }
-void Player::bombShoot() {
-
+void Player::bombShoot(Bomb* playerBomb) {
+	if (!playerBomb->getIsActive())
+	{
+		playerBomb->isActived(true);
+		playerBomb->setX(_rec.x + _rec.width);
+		playerBomb->setY(_rec.y + _rec.height);
+	}
 }
-void Player::input() {
+void Player::input(Bomb* playerBomb) {
 	if (IsKeyDown(KEY_W))
 		_rec.y -= 3.0f;
 	if (IsKeyDown(KEY_S))
@@ -20,7 +25,7 @@ void Player::input() {
 	if (IsKeyDown(KEY_SPACE))
 		shoot();
 	if (IsKeyPressed(KEY_C))
-		bombShoot();
+		bombShoot(playerBomb);
 }
 Rectangle Player::getRec() {
 	return _rec;

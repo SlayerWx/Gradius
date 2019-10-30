@@ -24,24 +24,15 @@ Color Bomb::getColor() {
 	return _color;
 }
 
-void Bomb::TheBombIsActived(bool active)
+void Bomb::isActived(bool active)
 {
 	itIsActive = active;
 }
-
-void Bomb::move()
-{
-	if (itIsActive)
-	{
-		_y += speed * GetFrameTime();
-	}
-}
-
 bool Bomb::getIsActive()
 {
 	return itIsActive;
 }
-Vector2 Lerp(Vector2 start, Vector2 end, float percent)
+Vector2 Bomb::moveLerp(Vector2 start, Vector2 end, float percent)
 {
 	end.x -= start.x;
 	end.y -= start.y;
