@@ -7,6 +7,7 @@ private:
 public:
 	Player();
 	void shoot();
+	void bombShoot();
 	void input();
 	Rectangle getRec();
 	float getRecX();

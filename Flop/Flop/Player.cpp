@@ -10,6 +10,9 @@ Player::Player() {
 void Player::shoot() {
 	
 }
+void Player::bombShoot() {
+
+}
 void Player::input() {
 	if (IsKeyDown(KEY_W))
 		_rec.y -= 3.0f;
@@ -17,6 +20,8 @@ void Player::input() {
 		_rec.y += 3.0f;
 	if (IsKeyDown(KEY_SPACE))
 		shoot();
+	if (IsKeyPressed(KEY_C))
+		bombShoot();
 }
 Rectangle Player::getRec() {
 	return _rec;
