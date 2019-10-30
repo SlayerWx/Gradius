@@ -65,7 +65,7 @@ void creditScene() {
 	bool creditBool = true;
 
 	Rectangle creditsButton;
-	creditsButton.x = screenWidth / 2 - 40;
+	creditsButton.x = menuPlayTextX;
 	creditsButton.y = menuPlayTextY + 160;
 	creditsButton.height = 30;
 	creditsButton.width = 113;
