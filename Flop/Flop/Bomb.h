@@ -11,7 +11,7 @@ private:
 	bool itIsActive;
 	float speed;
 public:
-	Bomb(bool isActive, float newSpeed);
+	Bomb(bool isActive, float newSpeed,int radius;
 	float getX();
 	float getY();
 	void setX(float x);
@@ -20,5 +20,6 @@ public:
 	Color getColor();
 	void TheBombIsActived(bool active);
 	void move();
+	bool getIsActive();
 };
 #endif

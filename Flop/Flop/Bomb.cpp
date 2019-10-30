@@ -1,6 +1,9 @@
 #include "Bomb.h"
-Bomb::Bomb(bool isActive,float newSpeed)
+Bomb::Bomb(bool isActive,float newSpeed,int radius)
 {
+	itIsActive = isActive;
+	speed = newSpeed;
+	_radius = radius;
 }
 float Bomb::getX() {
 	return _x;
@@ -32,4 +35,19 @@ void Bomb::move()
 	{
 		_y += speed * GetFrameTime();
 	}
+}
+
+bool Bomb::getIsActive()
+{
+	return itIsActive;
+}
+Vector2 Lerp(Vector2 start, Vector2 end, float percent)
+{
+	end.x -= start.x;
+	end.y -= start.y;
+	end.y *= percent;
+	end.x *= percent;
+	end.x += start.x;
+	end.y += start.y;
+	return end;
 }
