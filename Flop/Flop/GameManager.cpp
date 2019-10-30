@@ -2,7 +2,7 @@
 Enemy1* e1;
 Player* player;
 Bullet* bullets[10];
-
+Bomb* playerBomb;
 void draw() {
 	BeginDrawing();
 	ClearBackground(BLACK);
@@ -24,8 +24,9 @@ void game() {
 	e1 = new Enemy1;
 	player = new Player;
 	for (int i = 0; i < 10; i++){
-		bullets[i] = new Bullet;
+		bullets[i] = new Bullet();
 	}
+	playerBomb = new Bomb(true,150);
 
 	initBG1();
 

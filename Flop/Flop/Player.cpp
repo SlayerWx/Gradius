@@ -1,5 +1,4 @@
 #include "Player.h"
-
 Player::Player() {
 	_rec.x = 40.0f;
 	_rec.y = GetScreenHeight() / 2.0f;

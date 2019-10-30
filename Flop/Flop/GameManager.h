@@ -4,6 +4,7 @@
 #include "Player.h"
 #include "Scenes.h"
 #include "Backgrounds.h"
+#include "Bomb.h"
 #include <iostream>
 
 using namespace std;
