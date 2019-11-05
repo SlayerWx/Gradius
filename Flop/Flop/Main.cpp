@@ -1,4 +1,5 @@
 #include "GameManager.h"
-void main() {
+int main() {
 	sceneManager();
+	return 0;
 }

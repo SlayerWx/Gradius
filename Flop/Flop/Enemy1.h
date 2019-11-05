@@ -8,6 +8,7 @@ public:
 	Enemy1();
 	Enemy1(float posInY);
 	Rectangle getRec();
+	void setX(float newX);
 	Color getColor();
 	void destroy();
 	void update();

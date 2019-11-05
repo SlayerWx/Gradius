@@ -13,7 +13,8 @@ void draw() {
 	DrawRectangleRec(groundEnemy->getRec(),groundEnemy->getColor());
 	if (playerBomb->getIsActive())
 	{
-		DrawCircle(playerBomb->getX(), playerBomb->getY(), playerBomb->getRadius(), 
+		DrawCircle(static_cast<int>(playerBomb->getX()), static_cast<int>(playerBomb->getY()), 
+			static_cast<float>(playerBomb->getRadius()),
 			playerBomb->getColor());
 	}
 	EndDrawing();
@@ -22,18 +23,18 @@ void collisions() {
 	if (player->getRecY() < 0)
 		player->setRecY(1);
 	if (player->getRecY() > GetScreenHeight() - 40)
-		player->setRecY(GetScreenHeight() - 41);
+		player->setRecY(static_cast<float>(GetScreenHeight() - 41));
 
 	if (CheckCollisionRecs(player->getRec(), e1->getRec()) ||
 		CheckCollisionRecs(player->getRec(), groundEnemy->getRec()))
 		scenes = menu;
 	if (CheckCollisionCircleRec({ playerBomb->getX(),playerBomb->getY() },
-		playerBomb->getRadius(), groundEnemy->getRec()))
+		static_cast<float>(playerBomb->getRadius()), groundEnemy->getRec()))
 		groundEnemy->setX(groundEnemy->getRec().x + GetScreenWidth() + 50);
 }
 void game() {
 	e1 = new Enemy1();
-	groundEnemy = new Enemy1(GetScreenHeight());
+	groundEnemy = new Enemy1(static_cast<float>(GetScreenHeight()));
 	player = new Player();
 	for (int i = 0; i < 10; i++){
 		bullets[i] = new Bullet();
