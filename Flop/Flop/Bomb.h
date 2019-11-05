@@ -10,6 +10,8 @@ private:
 	Color _color;
 	bool itIsActive;
 	float speed;
+	Vector2 startLerp;
+	float percent;
 public:
 	Bomb(bool isActive, float newSpeed,int radius);
 	float getX();
@@ -20,6 +22,6 @@ public:
 	Color getColor();
 	void isActived(bool active);
 	bool getIsActive();
-	Vector2 moveLerp(Vector2 start, Vector2 end, float percent);
+	void moveLerp(Vector2 start,Vector2 end);
 };
 #endif

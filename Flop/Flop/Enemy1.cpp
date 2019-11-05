@@ -22,9 +22,9 @@ void Enemy1::update() {
 	}
 }
 void Enemy1::GroundUpdate() {
-	_rec.x -= 5.0f;
+	_rec.x -= 3.0f;
 	if (_rec.x <= -40.0f) {
-		_rec.x = 880.0f;
+		_rec.x = 1380.0f;
 	}
 }
 void Enemy1::destroy() {

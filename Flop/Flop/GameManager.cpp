@@ -30,7 +30,7 @@ void collisions() {
 		scenes = menu;
 	if (CheckCollisionCircleRec({ playerBomb->getX(),playerBomb->getY() },
 		static_cast<float>(playerBomb->getRadius()), groundEnemy->getRec()))
-		groundEnemy->setX(groundEnemy->getRec().x + GetScreenWidth() + 50);
+		groundEnemy->setX(1380.0f);
 }
 void game() {
 	e1 = new Enemy1();
@@ -41,11 +41,15 @@ void game() {
 	}
 	playerBomb = new Bomb(false,150,15);
 	initBG1();
-
 	while (scenes == gameplay) {
 		player->input(playerBomb);
 		e1->update();
 		groundEnemy->GroundUpdate();
+		if (playerBomb->getIsActive())
+		{
+			playerBomb->moveLerp({playerBomb->getX(), playerBomb->getY()}, 
+								{ playerBomb->getX(),static_cast<float>(GetScreenHeight()) });
+		}
 		collisions();
 		moveBG1();
 		draw();
