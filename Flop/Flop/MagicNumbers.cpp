@@ -9,8 +9,8 @@ const int promptFontSize = 30;
 const float menuPlayTextX = 20;
 const float menuPlayTextY = (screenHeight / 2);
 
-const float creditsTitle1X = 20;
-const float creditsTitle1Y = screenHeight / 3 + 40;
-const float creditsSub1X = titlePosX + 90;
-const float creditsSub1Y = creditsTitle1Y + 50;
+const int creditsTitle1X = 20;
+const int creditsTitle1Y = screenHeight / 3 + 40;
+const int creditsSub1X = titlePosX + 90;
+const int creditsSub1Y = creditsTitle1Y + 50;
 

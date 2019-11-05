@@ -9,10 +9,10 @@ extern const int titleFontSize;
 extern const int promptFontSize;
 extern const float menuPlayTextX;
 extern const float menuPlayTextY;
-extern const float creditsTitle1X;
-extern const float creditsTitle1Y;
-extern const float creditsSub1X;
-extern const float creditsSub1Y;
+extern const int creditsTitle1X;
+extern const int creditsTitle1Y;
+extern const int creditsSub1X;
+extern const int creditsSub1Y;
 
 
 

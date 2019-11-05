@@ -29,21 +29,29 @@ void menuScene() {
 
 		DrawText(FormatText("Gradius probs"), titlePosX, titlePosY, titleFontSize, WHITE);
 		if (CheckCollisionPointRec(GetMousePosition(), playButton))
-			DrawText(FormatText("Play"), menuPlayTextX, menuPlayTextY, promptFontSize, RED);
+			DrawText(FormatText("Play"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY),
+					promptFontSize, RED);
 		else
-			DrawText(FormatText("Play"), menuPlayTextX, menuPlayTextY, promptFontSize, WHITE);
+			DrawText(FormatText("Play"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY),
+					promptFontSize, WHITE);
 
 		if (CheckCollisionPointRec(GetMousePosition(), closeButton))
-			DrawText(FormatText("Close"), menuPlayTextX, menuPlayTextY + 50, promptFontSize, RED);
+			DrawText(FormatText("Close"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY + 50),
+					promptFontSize, RED);
 		else
-			DrawText(FormatText("Close"), menuPlayTextX, menuPlayTextY + 50, promptFontSize, WHITE);
+			DrawText(FormatText("Close"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY + 50),
+					promptFontSize, WHITE);
 
 		if (CheckCollisionPointRec(GetMousePosition(), creditsButton))
-			DrawText(FormatText("Credits"), menuPlayTextX, menuPlayTextY + 100, promptFontSize, RED);
+			DrawText(FormatText("Credits"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY + 100),
+					promptFontSize, RED);
 		else
-			DrawText(FormatText("Credits"), menuPlayTextX, menuPlayTextY + 100, promptFontSize, WHITE);
+			DrawText(FormatText("Credits"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY + 100),
+					promptFontSize, WHITE);
 
-		DrawText(FormatText("v 0.1"), GetScreenWidth()-50, 1, 20, WHITE);
+		DrawText(FormatText("v 0.4"), GetScreenWidth()-50, 1, 20, WHITE);
+		DrawText(FormatText("C to Shot Bomb"), GetScreenWidth() - 130, GetScreenHeight() - 40, 15, WHITE);
+		DrawText(FormatText("move with W and S"), GetScreenWidth() - 145, GetScreenHeight() - 20, 15, WHITE);
 
 		EndDrawing();
 
@@ -78,9 +86,11 @@ void creditScene() {
 		DrawText(FormatText("Matias Karplus"), creditsSub1X, creditsSub1Y, 20, WHITE);
 
 		if (CheckCollisionPointRec(GetMousePosition(), creditsButton))
-			DrawText(FormatText("Credits"), menuPlayTextX, menuPlayTextY + 160, promptFontSize, RED);
+			DrawText(FormatText("Credits"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY + 160), 
+				promptFontSize, RED);
 		else
-			DrawText(FormatText("Credits"), menuPlayTextX, menuPlayTextY + 160, promptFontSize, WHITE);
+			DrawText(FormatText("Credits"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY + 160), 
+				promptFontSize, WHITE);
 		EndDrawing();
 
 
@@ -113,14 +123,18 @@ void pauseScene() {
 		ClearBackground(BLACK);
 		DrawText(FormatText("PAUSED"), titlePosX, 1, titleFontSize, WHITE);
 		if (CheckCollisionPointRec(GetMousePosition(), resumeButton))
-			DrawText(FormatText("Resume"), menuPlayTextX, menuPlayTextY, promptFontSize, RED);
+			DrawText(FormatText("Resume"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY), 
+				promptFontSize, RED);
 		else
-			DrawText(FormatText("Resume"), menuPlayTextX, menuPlayTextY, promptFontSize, WHITE);
+			DrawText(FormatText("Resume"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY), 
+				promptFontSize, WHITE);
 
 		if (CheckCollisionPointRec(GetMousePosition(), menuButton))
-			DrawText(FormatText("Menu"), menuPlayTextX, menuPlayTextY + 50, promptFontSize, RED);
+			DrawText(FormatText("Menu"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY + 50), 
+				promptFontSize, RED);
 		else
-			DrawText(FormatText("Menu"), menuPlayTextX, menuPlayTextY + 50, promptFontSize, WHITE);
+			DrawText(FormatText("Menu"), static_cast<int>(menuPlayTextX), static_cast<int>(menuPlayTextY + 50), 
+				promptFontSize, WHITE);
 		EndDrawing();
 
 		if (CheckCollisionPointRec(GetMousePosition(), resumeButton) && IsMouseButtonReleased(MOUSE_LEFT_BUTTON)) {
